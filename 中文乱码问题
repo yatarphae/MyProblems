@@ -1,0 +1,7 @@
+问题描述:
+  使用JODConverter和LibreOffice在CentOS系统中将office文档转换成pdf文档出现中文乱码
+关键词:
+  jodconverter libreoffice centos office pdf 中文 乱码
+解决过程:
+  Step1:将windows系统盘/windows/fonts目录下的中文字体上传到centos服务器,并复制到/usr/share/fonts目录下;
+  Step2:使用命令 fc-cache -fv 刷新字体缓存。
