@@ -1,0 +1,4 @@
+JSP中,语句Collection<SomeType> var = new Collection<>();报错:'<>' is not allowed for source level below 1.7,
+但是经检查编译环境和运行环境均在1.8, 在StackOverflow搜索类似问题后找到解决方法:
+  在tomcat主目录/conf/web.xml文件中找到名为jsp的servlet,添加两个初始化参数(init-praram):compilerSourceVM和compilerTargetVM,值均设为1.8
+重启tomcat可验证问题是否得到解决
